@@ -125,10 +125,6 @@ svg.i { width: 1em; height: 1em; flex: none; fill: none; stroke: currentColor; s
 .bar { height: 88px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px; }
 .brand { justify-self: start; display: block; border-radius: 8px; }
 .brand img { display: block; width: 128px; }
-/* Header logo: app.js redraws the "on" as vector strokes on top of the image, so the n can turn into the ∞. */
-.brand { position: relative; }
-.brand.has-on img { clip-path: inset(0 0 0 43.7%); }
-.brand-on { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
 .primary { display: flex; gap: 4px; }
 .primary a, .actions .link { font: 500 15.5px/1 var(--sans); letter-spacing: -.01em; padding: 12px 15px; border-radius: 12px; color: var(--ink-2); transition: background-color .2s, color .2s; }
 .primary a:hover, .actions .link:hover { background: rgba(11,16,32,.06); color: var(--ink); }
@@ -514,6 +510,21 @@ a.pt.big:hover { background: #fff; }
 .fmap a { font: 500 14.5px/1.3 var(--sans); color: rgba(244,246,251,.62); text-decoration: none; }
 .fmap a:hover { color: #fff; text-decoration: underline; }
 .devline span a { display: inline; margin: 0; padding: 0; background: none; box-shadow: none; color: inherit; font: inherit; text-decoration: underline; text-underline-offset: 3px; }
+
+/* links from the homepage sections to the product pages */
+.go { display: inline-flex; align-items: center; gap: 6px; align-self: flex-start; font: 600 16px/1.2 var(--sans); letter-spacing: -.01em; color: var(--blue-ink); border-radius: 8px; }
+.go .i { width: 16px; height: 16px; transition: transform .2s; }
+.go:hover { text-decoration: underline; text-underline-offset: 3px; }
+.go:hover .i { transform: translateX(3px); }
+.step .go { margin: 14px 16px 0; }
+.bcard .go { margin: 14px 0 22px; position: relative; z-index: 1; }
+.gcard p { padding-bottom: 0; }
+.gcard .go { margin: 14px 0 34px; }
+.ex { position: relative; transition: background-color .2s; }
+.ex:hover { background: var(--t-blue); }
+.ex b a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.allp { margin-top: 28px; text-align: center; }
+.brand picture { display: block; }
 
 .preview-note { margin:0; padding:10px 20px; background:#060A1A; color:rgba(244,246,251,.78); font:500 13.5px/1.4 var(--sans); text-align:center; position:relative; z-index:60; }
 .preview-note b { display:inline-block; margin-right:8px; padding:3px 9px; border-radius:999px; background:var(--gold); color:#201400; font-weight:650; font-size:12px; }
