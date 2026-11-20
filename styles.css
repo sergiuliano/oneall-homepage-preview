@@ -125,6 +125,10 @@ svg.i { width: 1em; height: 1em; flex: none; fill: none; stroke: currentColor; s
 .bar { height: 88px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px; }
 .brand { justify-self: start; display: block; border-radius: 8px; }
 .brand img { display: block; width: 128px; }
+/* Header logo: app.js redraws the "on" as vector strokes on top of the image, so the n can turn into the ∞. */
+.brand { position: relative; }
+.brand.has-on img { clip-path: inset(0 0 0 43.7%); }
+.brand-on { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
 .primary { display: flex; gap: 4px; }
 .primary a, .actions .link { font: 500 15.5px/1 var(--sans); letter-spacing: -.01em; padding: 12px 15px; border-radius: 12px; color: var(--ink-2); transition: background-color .2s, color .2s; }
 .primary a:hover, .actions .link:hover { background: rgba(11,16,32,.06); color: var(--ink); }
