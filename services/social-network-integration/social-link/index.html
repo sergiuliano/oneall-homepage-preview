@@ -95,7 +95,13 @@
             <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Ready in minutes</li>
           </ul>
         </div>
-        <div class="pvis violet" aria-hidden="true"><div class="pbox list"><div class="rw"><span class="a bi"><i class="ic br i-google"></i></span><div class="tx">Google<small>Linked today</small></div><span class="t g">Linked</span></div><div class="rw"><span class="a bi"><i class="ic br i-facebook"></i></span><div class="tx">Facebook<small>Linked in March</small></div><span class="t g">Linked</span></div><div class="rw"><span class="a bi"><i class="ic br i-apple"></i></span><div class="tx">Apple<small>Not linked yet</small></div><span class="t b">Add</span></div></div></div>
+        <div class="pvis demo violet" data-n="5" aria-hidden="true">
+        <div class="dstage">
+    <div class="pbox list"><div class="lt sm pad">Maya’s sign-in options</div>
+      <div class="rw"><span class="a bi"><i class="ic br i-google"></i></span><div class="tx">Google<small>Linked today</small></div><span class="t g">Linked</span></div><div class="rw"><span class="a bi"><i class="ic br i-facebook"></i></span><div class="tx">Facebook<small>Linked in March</small></div><span class="t g">Linked</span></div>
+      <div class="rw"><span class="a bi"><i class="ic br i-apple"></i></span><div class="tx">Apple<small><span class="sw" data-to="1">Not linked yet</span><span class="sw" data-from="2">Linked just now</span></small></div><span class="t b sw" data-to="1" data-cur="1" data-hl="1">Add</span><span class="t g sw" data-from="2">Linked</span></div></div><div class="dtoast fx" data-from="2"><span class="ok"><svg class="i"><use href="#i-check"/></svg></span><div><b>Apple account linked</b><small>Maya can now sign in with Apple</small></div></div><svg class="dcur"><use href="#i-cursor"/></svg></div>
+        <ol class="dsteps"><li data-step="0"><b>1</b>Member opens their profile</li><li data-step="1"><b>2</b>Clicks “Add”</li><li data-step="2"><b>3</b>Apple signs them in next time</li></ol>
+      </div>
       </div>
     </div>
   </section>
@@ -184,6 +190,7 @@
   </div>
 </footer>
 
+<script src="../../../demo.js" defer></script>
 <script src="../../../app.js" defer></script>
 </body>
 </html>
